@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="var dom &#x3D; document.getElementById(&#39;container&#39;);     var myChart &#x3D; echarts.init(dom, null, {       renderer: &#39;canvas&#39;,       useDirtyRect: false     });">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/html/revenue_part.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="var dom &#x3D; document.getElementById(&#39;container&#39;);     var myChart &#x3D; echarts.init(dom, null, {       renderer: &#39;canvas&#39;,       useDirtyRect: false     });">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-28T13:45:44.045Z">
+<meta property="article:modified_time" content="2024-05-28T13:41:23.597Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/html/revenue_part.html" class="article-date">
+  <time class="dt-published" datetime="2024-05-28T13:45:44.045Z" itemprop="datePublished">2024-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=bar-race&code=G4QwTgBAJiAuIQLwQNoFgBQFs99g3gJ4Cm4AXBAEwAMtANBKADYCuxAzhSgOwCMArADoAzHQB2LJkzoA2YcMH9q4ydIlSVG9UwC6AXzqY8xiEVJgKNarwbM2nVNwAsC0dtlPqg5e9-rNugZGJrhm5FS0lLYgrBxc3AAcToIydACcwryCUTIJQm7-flqq-oZYIThhFhHUoowx9lwJmd7pSoJOdNyUyQXF_WolQeUVpiThVp31sQ4oCQKK6Qlpgtxd_EI2RYMDpcGjVZa0_NEz8S50vNZCa9y5KQGP23sjFYc1qdONqLkrnbxXLxrBLcbgiJ6FSFSF6jAjjapWNZfOI_ahCf4CLLKK6UGSCLZQnZEmGw95WBKnb4ofhOME2AFpLKpAHUBL4iEDAIkg7wo7UNKUlEoJxXDqXaigwQUtJOPEEznPYawsbmI5XQWzYROIQnDLo9K0KU-QkcwJlZVk6w2ZGayhCaXcBQCxlgzrbU3ct68iK8KI2rjCSiUVZLZIUhIgqWmj1K0nemi8Op2IWUGVRtISkNXX3ZaOK81x1U-qbJzWOh4AwOLDJOvOEz0hS0CDUBmRYy68RKtNL8BSpd35_ZeosJz6lgO98EA5zstIyZJRAf12M8kfWJHj1BarIUq4JLwC5YrE5L3Yr4cTawU_1b5qtK60qOA4P9k2D16N-PWAU3lDCBJ4gKgJCMytQrMaCrLgWq6XjQLZblWqQ9myog4gudZntBF4ItQlDWpuKCUHkuZ5MkaxXPwL4YcS56fmuQbwSgp7SPICidHcCgnPuWRrDIlBgpQDYmJalBJg0QrMXQIpeKIzRsjYaREQ8uTBtQ-hDrgOgANyYBpOCgJA8LsEg0BwCAggALYgAADgAFAAlrAxAWUgAB8ECOc5gjwgAlFpEAAPQBRAgALxoAa8qAC56gC_coADqaAHbGenYAZEAAMYsGAYDEGIsAAJJiFAxAAB4mdQOkYAA9tZsD2eVYgmfgiV4AARiAKUANYAOZgOVLD5QAwuVTDldUADkYAdU1tm8BmdB4Z0QbUD5I1YSE1WwEwxAUA1H6wk5hWwBQI0AErEMAWVsBA1nddZw3VbVEDlQAZtA9mPY9xCZdl0DENZ4CwBZWWwOwy2NSE7AsE1e0HRAI1NcQsAAO7EFlNTUBAID5REokgztowbY90MjSlgMfSNoM4LRJiwOVg3VdZW3k8YsBgPZHUdR9h2eRZZO43glPGBt7P5QzvMhMN9mA4dZ1gNVKUxDjyq4PjhPKwrivYDA8BcCNOVWR19liB1EAAMqDSwd1iMDDAjQAIuVaUA19pusBbVsw3lj3DVZFsm2brvLe7esGx1y0jQAQiw7AGxwxl5WI5WgBbocABKkEwsAABZy5locALJwB99kxMDOiMxA_N4EwIBw0wIvq6MntgN7TmjfgTV6GQAA6dX4FAegAKRq_XJie9lxv2QAXptNBlyEFe4OwhdCrPlQr8YYggADh0AIIpcT7DGQAYt13MrfXsCENZm0w9ZEtD8PEBgCAUD2ZH2ueIP1vcNQg86Gf6vE2yhzVAI0lCfxht_X-_9FZBXRlAAAVpHWAEBM7EAgOweAMt0aYyylAbBHUNprzwBgv629DYbQoLwfc0DlS4LIQQ6-wgZDKCIbgTWIAKDsJQGlDKgM8oFUKjoQQpZLI2VsrZZMDADYCJ8m5UwrCTAbWQRvAGxlkAoB1kHQ2vsXY1UtgHW29sWCO2Qc7c2ei3Y6zEI3b2eidHmNqpY3WIB9aG1DhHKOYgY4QDjgnOAeiU5p0ztnYgecC4s2LiNbSCiBbw1SoNYaaiQHjUmqJXcuFxSUCWgwdwEBcljQmrZNJmTMnZLyf4cpGhKm6DKg_Ewr0IASPEkgZA2hZGZVgOlOq2h_IxLwB0rpphkQ5M3tfFRHAUDSKKn_DyTkLLGwvhQ-JQ0wDsEmflaZEAAD8QyUoJOqHslZaypmCPLhALaeg9C1LqeXHyghHr2XTh9Bycy5FcwgAAQkQK01QPkaGwmctZDOIAo4OG2jcvAXMFmECWeCiFJh2DAqgOVBGYdWDVHVH0sGSKUUAHk3qL1gAADQoCw0WNzEXPxRQNFZh0UkgFssoCATKWWKCWliimfS9BEO5eS7Af8y5dRshneyKU67n0vtfEaUN77KmVodQBLdZW7UqodGQ_BP5EIwTC6-cK6lQ0OgATSLCNCAABqUy8BuHpU-rlDZgjvLmH-Q3WqhMmqDTwT0ayxV2AY3YAAWkXizR6yr1YPKkIdAAxKxHmw9eXKnjSYK5ukMAppCI9XqKUfYsGsprYgfVgUy1srIvVFQeG2v4UVEytly18PteaiAvBZH90teZDahtM7XNGMlLxCMbZmRMlw2t2VK2CK7RUCyhAC1_UEIS3FVU9G2VLcqINEtZjLvruwigvb-3wGEeJdgoi7JNNiFI-1sjEDuQ3TcpReTRlJI0c41xRszH-2tnbB2gN7FvvdtYr2_j7qvosQYp9wd3GR2jgfHxYh46JwCXQEaqcYjBPAKEhD-cW5FyYCXcdELb2HMSSZDRKSin_hKTiMpuT8kkeKTiUpAcqMVO0NEvlisGknout86p7T4aDJ6Ry7AAywA92GXereYmJknJmVCxZ18COrPWQInQ2zdn7IoPJ459rlN6HOaYS5uH656DueGluLznJvNeV8n5UgfI8oFax3AQqgWivFXU7VsKBMoKKoTY14RTUWp3WZR14BnWK1Hm6j1VAnDevQX6wNhcQ2hYbo82uMNo3yFjTcxN6tssVCMwZ7AuWF7wzyi3Zgtkc15unTLBggJFr-VgYAeetKCACXPQAL2aAAbTQAAHKAEJrQAf2qAAsIoAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+     var data = [
+            {year: 2000, values: [715.3,null,633.50,null,null,null,null]},
+            {year: 2001, values: [743.3,null,640.0,null,null,null,null]},
+            {year: 2002, values: [784.6,931.2,685.3,null,null,null,null]},
+            {year: 2003, values: [831.0,950.4,724.3,null,null,null,null]},
+            {year: 2004, values: [815.5,989.7,755.1,null,null,null,null]},
+            {year: 2005, values: [743,1015.7,768.6,null,null,null,null]},
+            {year: 2006, values: [689.4,1100.7,877.3,null,null,null,null]},
+            {year: 2007, values: [605.4,1151.0,1026.1,null,null,null,null]},
+            {year: 2008, values: [547.1,1191.6,1108.1,null,null,null,null]},
+            {year: 2009, values: [410.4,1077.8,946.1,null,null,null,null]},
+            {year: 2010, values: [345.5,935.4,900.80,null,null,null,null]},
+            {year: 2011, values: [325.8,973.9,917.4,null,null,null,null]},
+            {year: 2012, values: [322.7,984.8,887.8,null,null,null,null]},
+            {year: 2013, values: [294.8,907.7,1012.2,null,null,null,null]},
+            {year: 2014, values: [373.6,1132.5,933.9,null,null,null,null]},
+            {year: 2015, values: [361.0,1178.0,953.6,null,null,null,null]},
+            {year: 2016, values: [353.3,1174.1,964.2,null,null,null,null]},
+            {year: 2017, values: [341.8,1080.9,899.5,null,null,null,null]},
+            {year: 2018, values: [383.0,1047.8,1002.6,null,null,null,null]},
+            {year: 2019, values: [386.9,1005.6,1039.0,null,null,null,null]},
+            {year: 2020, values: [332.6,958.3,1024.2,null,null,null,null]},
+            {year: 2021, values: [285.2,854.7,1052.6,null,null,null,null]},
+            {year: 2022, values: [null,null,null,333.4,763.5,801.7,627.2]},
+            {year: 2023, values: [null,null,null,410.3,838.1,928.6,682.0]}
+        ];
+
+        var years = data.map(item => item.year); // 提取年份数据
+        var currentIndex = 0;
+option = {
+            backgroundColor: 'rgb(190,214,220)',
+            title: {
+                text: 'Revenue proportion of different departments',
+                subtext: 'between 2000 and 2023',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['Imaging Solutions', 'Document Solutions', 'Information Solutions', 'Imaging','Business Innovation','Healthcare','Materials']
+            },
+            label: {
+                        formatter: '{b}:\n {d}%',
+                        fontSize:20
+                    },
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    center: ['50%', '70%'],
+                    // adjust the start and end angle
+                    startAngle: 180,
+                    endAngle: 360,
+                    data: data[currentIndex].values.map((value, index) => {
+                        let names = ['Imaging Solutions', 'Document Solutions', 'Information Solutions', 'Imaging','Business Innovation','Healthcare','Materials'];
+                        let colors = ['rgb(238,102,102)', null, null, 'rgb(238,102,102)', null, null, null];
+                        if (value == null) return null; 
+                        return { value, name: names[index], itemStyle: colors[index] ? { color: colors[index] } : {}};
+                    }).filter(item => item !== null),
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ],
+            graphic: {
+                type: 'text',
+                left: 'center',
+                top: '65%',
+                style: {
+                    text: 'Year: ' + data[currentIndex].year,
+                    font: 'bold 24px sans-serif',
+                    fill: '#333'
+                }
+            }
+        };
+
+
+
+        function updateChart() {
+            currentIndex = (currentIndex + 1) % data.length;
+            var newData = data[currentIndex];
+            myChart.setOption({
+                series: [{
+                    data: newData.values.map((value, index) => {
+                         let names = ['Imaging Solutions', 'Document Solutions', 'Information Solutions', 'Imaging','Business Innovation','Healthcare','Materials'];
+                        let colors = ['rgb(238,102,102)', null, null, 'rgb(238,102,102)', null, null, null];
+                        if (value == null) return null;
+                        return { value, name: names[index], itemStyle: colors[index] ? { color: colors[index] } : {}};
+                    }).filter(item => item !== null)
+                }],
+                graphic: {
+                    style: {
+                        text: 'Year: ' + newData.year,
+                        font: 'bold 24px sans-serif',
+                      fill: '#333'
+                    }
+                }
+            });
+        }
+        setInterval(updateChart, 1000); // 每2秒更新一次图表
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/html/revenue_part.html" data-id="clwqvfyam000ai0vpa1891eyq" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/05/24/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
